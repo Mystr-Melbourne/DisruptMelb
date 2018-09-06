@@ -1,22 +1,27 @@
 import React, {Component} from "react";
-import {ScrollView, Text, View, Button} from "react-native";
+import {ScrollView, Text, View, Button, Header} from "react-native";
 import HomeScreen from './HomeScreen.js';
-import Settings from './Settings.js';
-
+import UserProfile from './UserProfile.js';
 
 export default class Secured extends React.Component {
 	constructor(props) {
-		super(props);
+    super(props);
+    this.state = {
+      pageId: 0
+    }
+		this.viewHomeScreen = this.viewHomeScreen.bind(this);
+		this.viewUserProfile = this.viewUserProfile.bind(this);
+		this.viewSettings = this.viewSettings.bind(this);
+  }
 
-		this.state = {
-			pageId: 0
-		};
-
-		this.navToSettings = this.navToSettings.bind(this);
+	viewHomeScreen() {
+		this.setState({pageId: 0});
 	}
-
-	navToSettings() {
+	viewUserProfile() {
 		this.setState({pageId: 1});
+	}
+	viewSettings() {
+		this.setState({pageId: 2});
 	}
 
 	render() {
@@ -24,23 +29,18 @@ export default class Secured extends React.Component {
 			case 0: {
 				return (
 					<ScrollView style={{padding: 20}}>
-						<Text style={{fontSize: 27}}>Welcome</Text>
-						<View style={{margin: 20}} />
-						<HomeScreen />
-						<Button onPress={this.navToSettings} title="Settings" />
+						<HomeScreen onProfilePress={this.viewUserProfile}/>
 					</ScrollView>
 				);
-				break;
 			}
 			case 1: {
 				return (
 					<ScrollView style={{padding: 20}}>
-						<Settings onLogoutPress={this.props.onLogoutPress}/>
+						<Text style={{fontSize: 27}}>User Profile</Text>
+						<UserProfile onHomePress={this.viewHomeScreen} onLogoutPress={this.props.onLogoutPress}/>
 					</ScrollView>
-				)
-				break;
+				);
 			}
 		}
-		
 	}
 }
