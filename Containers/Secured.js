@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {ScrollView, Text, View, Button, Header} from "react-native";
 import HomeScreen from './HomeScreen.js';
 import UserProfile from './UserProfile.js';
+import Settings from './Settings.js';
 
 export default class Secured extends React.Component {
 	constructor(props) {
@@ -29,7 +30,7 @@ export default class Secured extends React.Component {
 			case 0: {
 				return (
 					<ScrollView style={{padding: 20}}>
-						<HomeScreen onProfilePress={this.viewUserProfile}/>
+						<HomeScreen onProfilePress={this.viewUserProfile} onSettingPress={this.viewSettings}/>
 					</ScrollView>
 				);
 			}
@@ -40,6 +41,13 @@ export default class Secured extends React.Component {
 						<UserProfile onHomePress={this.viewHomeScreen} onLogoutPress={this.props.onLogoutPress}/>
 					</ScrollView>
 				);
+			}
+			case 2: {
+				return (
+					<ScrollView style={{padding: 20}}>
+						<Settings onHomePress={this.viewHomeScreen} onLogoutPress={this.props.onLogoutPress}/>
+					</ScrollView>
+				)
 			}
 		}
 	}

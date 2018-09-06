@@ -27,6 +27,7 @@ export default class HomeScreen extends React.Component {
           <MyCalendar selectDay={this.selectDay}/>
           <ShiftInfo date={this.state.selectedDay}/>
           <Button onPress={this.props.onProfilePress} title="Profile" />
+          <Button onPress={this.props.onSettingPress} title="Settings" />
       </ScrollView>
     )
   }
