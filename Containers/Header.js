@@ -16,7 +16,7 @@ class HeaderBanner extends React.Component {
                 justifyContent: 'space-between'
             }}>
 
-                <Icon reverse color='#517fa4' name='settings' onPress={this.props.onProfilePress}/>
+                <Icon reverse color='#517fa4' name='account-box' onPress={this.props.onProfilePress}/>
 
                 <Image source={require("../res/Logo-100.jpg")} style={{height: 30, width: 65, marginTop: 25}}/>
 
