@@ -24,8 +24,10 @@ class ShiftInfo0 extends React.Component{
   render() {
     return(
       <View>
-        <View style={{borderColor: 'black', padding: 5}}>
-          <Text>{this.getShiftInfo()}</Text>
+        <View style={{borderRadius: 2, borderWidth: 1, padding: 5}}>
+          <Text>What: Catering{'\n'}
+                Where: 520 Bourke St.{'\n'}
+                When: 4:00pm - 7:30pm{'\n'}</Text>
         </View>
       </View>
     );

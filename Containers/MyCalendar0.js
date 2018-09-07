@@ -11,7 +11,8 @@ class MyCalendar0 extends React.Component {
 	render() {
 		return (
 			<View>
-				<Text>Monthly Shifts</Text>
+				
+				<View>
 				<View style={{
 					flexDirection: 'row', flex: 1,
 				}}>
@@ -270,6 +271,7 @@ class MyCalendar0 extends React.Component {
 			}}>
 				<Text>31</Text>
 			</View>
+		</View>
 		</View>
 			</View>
 		);
