@@ -6,7 +6,7 @@ export default class OpenShifts extends Component {
   render() {
     return (
       <ScrollView>
-        <TouchableOpacity onPress={this.}>
+        <TouchableOpacity>
           <View style={Styles.oscatering}>
             <Text>This is a CATERING job and these are details of the job!</Text>
               <Text>START: 6AM</Text>
