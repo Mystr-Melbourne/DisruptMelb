@@ -11,8 +11,6 @@ class Login extends React.Component {
 				<TextInput placeholder="Password" />
 				<View style={{margin: 7}} />
 				<Button onPress={this.props.onLoginPress} title="Submit" />
-
-
 			</ScrollView>
 		);
 	}
