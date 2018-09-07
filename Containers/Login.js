@@ -18,7 +18,7 @@ class Login extends React.Component {
                 <Button onPress={this.props.onLoginPress} title="User Login"/>
 
                 <View style={{margin: 7}}/>
-                <Button onPress={this.props.onAdminPress} title="Admin Login"/>
+                {/* <Button onPress={this.props.onAdminPress} title="Admin Login"/> */}
 
             </ScrollView>
         );
