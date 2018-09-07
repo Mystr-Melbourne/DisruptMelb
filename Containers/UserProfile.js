@@ -11,7 +11,7 @@ class UserProfile extends React.Component {
     return (
       <View>
         <Image source={require('../res/duck.jpg')} style={{margin: 60, borderWidth: 20}}/>
-        <Text style={{color: 'red', fontSize: 18, textAlign: 'center'}}>Emplpyee</Text>
+        <Text style={{color: 'red', fontSize: 18, textAlign: 'center'}}>Employee</Text>
         <Text style={{fontSize: 27, fontWeight: 'bold', textAlign: 'center'}}>Example User</Text>
         <View style={{
           flexDirection: 'row'
