@@ -44,7 +44,6 @@ class Secured extends React.Component {
         switch (this.state.pageId) {
             case 0: {
                 return (
-
                     <ScrollView style={{padding: 20}}>
                         <Header onOSPress={this.viewOpenShifts} onProfilePress={this.viewUserProfile}
                                 onHomePress={this.viewHomeScreen}/>
@@ -54,28 +53,25 @@ class Secured extends React.Component {
             }
             case 1: {
                 return (
-
                     <ScrollView style={{padding: 20}}>
                         <Header onOSPress={this.viewOpenShifts} onProfilePress={this.viewUserProfile}
                                 onHomePress={this.viewHomeScreen}/>
-                        <Text style={{fontSize: 27}}>User Profile</Text>
-                        <UserProfile onHomePress={this.viewHomeScreen} onLogoutPress={this.props.onLogoutPress}/>
+                        <UserProfile onLogoutPress={this.props.onLogoutPress} onHomePress={this.viewHomeScreen}/>
                     </ScrollView>
                 );
             }
             case 3: {
                 return (
-                    <View>
+                    <View style={{padding: 20}}>
                         <Header onOSPress={this.viewOpenShifts} onProfilePress={this.viewUserProfile}
                                 onHomePress={this.viewHomeScreen}/>
                         <ShiftDetailed onHomePress={this.viewHomeScreen}/>
                     </View>
                 )
             }
-
             case 5: {
                 return (
-                    <View>
+                    <View style={{paddingTop: 20, paddingLeft: 20, paddingRight: 20}}>
                         <Header onOSPress={this.viewOpenShifts} onProfilePress={this.viewUserProfile}
                                 onHomePress={this.viewHomeScreen}/>
                         <OpenShifts/>

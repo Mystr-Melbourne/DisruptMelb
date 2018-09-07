@@ -8,9 +8,9 @@ class HomeScreen extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			selectedDay: "Click on a day to view available shifts"
+      selectedDay: "Click on a day to view available shifts"
 		};
-		this.selectDay = this.selectDay.bind(this);
+    this.selectDay = this.selectDay.bind(this);
 	}
 
 	selectDay(day) {
