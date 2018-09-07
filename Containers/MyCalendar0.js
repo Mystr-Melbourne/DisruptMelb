@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {ScrollView, Text, View, StyleSheet} from "react-native";
 import {Agenda} from "react-native-calendars";
-export default class MyCalendar0 extends React.Component {
+class MyCalendar0 extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -11,8 +11,9 @@ export default class MyCalendar0 extends React.Component {
 	render() {
 		return (
 			<View>
+				<Text>Monthly Shifts</Text>
 				<View style={{
-					flexDirection: 'row',
+					flexDirection: 'row', flex: 1,
 				}}>
 					<View style={{
 						borderRadius: 2,
@@ -78,10 +79,6 @@ export default class MyCalendar0 extends React.Component {
 					}}>
 						<Text>8</Text>
 					</View>
-			</View>
-				<View style={{
-					flexDirection: 'row',
-				}}>
 					<View style={{
 						borderRadius: 2,
 						borderWidth: 1,
@@ -90,6 +87,11 @@ export default class MyCalendar0 extends React.Component {
 					}}>
 						<Text>9</Text>
 					</View>
+			</View>
+				<View style={{
+					flexDirection: 'row', flex: 1,
+				}}>
+
 					<View style={{
 						borderRadius: 2,
 						borderWidth: 1,
@@ -148,8 +150,9 @@ export default class MyCalendar0 extends React.Component {
 					</View>
 			</View>
 			<View style={{
-				flexDirection: 'row',
+				flexDirection: 'row', flex: 1,
 			}}>
+
 				<View style={{
 					borderRadius: 2,
 					borderWidth: 1,
@@ -206,18 +209,19 @@ export default class MyCalendar0 extends React.Component {
 				}}>
 					<Text>24</Text>
 				</View>
-				<View style={{
-					borderRadius: 2,
-					borderWidth: 1,
-					padding: 4,
-					margin: 5
-				}}>
-					<Text>25</Text>
-				</View>
 		</View>
 		<View style={{
-			flexDirection: 'row',
+			flexDirection: 'row', flex: 1,
 		}}>
+
+		<View style={{
+			borderRadius: 2,
+			borderWidth: 1,
+			padding: 4,
+			margin: 5
+		}}>
+			<Text>25</Text>
+		</View>
 			<View style={{
 				borderRadius: 2,
 				borderWidth: 1,
@@ -271,3 +275,5 @@ export default class MyCalendar0 extends React.Component {
 		);
 	}
 }
+
+export default MyCalendar0;
