@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View, ScrollView, Text, Button, TouchableOpacity} from 'react-native';
+import {View, ScrollView, Text, Button, TouchableOpacity, Header } from 'react-native';
 import { Styles } from './Styles.js';
 
 class ShiftDetailed extends React.Component{
@@ -11,47 +11,70 @@ class ShiftDetailed extends React.Component{
     }
   }
 
+  hideModal = () => {
+    this.setState({displayModal: false});
+  }
+
   render() {
     return(
-      <View>
-        <TouchableOpacity onPress={this.props.onHomePress}>
-          <View >
-            <Text style={Styles.closeBanner} >Close</Text>
-          </View>
-        </TouchableOpacity>
-        <ScrollView style={{
-          height:530
-        }}>
-          <Text>
-            Info{'\n'}
-            Info{'\n'}
-            Info{'\n'}
-            Info{'\n'}
-            Info{'\n'}
-          </Text>
+      <View style={{backgroundColor:'#FF3A2F'}}>
+        <ScrollView style={{height:700}}>
+          <Text style={{
+            textAlign: 'center',
+            color: 'white',
+            fontWeight: 'bold',
+            fontSize: 48
+          }}>{'\n\n'}CATERING{'\n\n'}</Text>
           {this.state.displayModal && (
             <View style={Styles.modal}>
               <Text style={{
-                paddingBottom: 20
+                paddingBottom: 20,
+                textAlign: 'center'
               }}>
-                Are you sure you want to open your shift?
+                Are you sure you want to forfeit your shift?{'\n'}
+                You may not be able to get it back.
               </Text>
               <View style={{
-                  flex: 1,
                   flexDirection: 'row',
-                  justifyContent: 'space-between'
+                  justifyContent: 'space-evenly',
+
                 }}>
-                <Button onPress={this.props.onShiftDetailedPress} title="Yes" style={Styles.button}/>
-                <Button onPress={this.props.onShiftDetailedPress} title="No" style={Styles.button}/>
+                <Button onPress={this.hideModal} title="Confirm" style={Styles.button}/>
+                <Button onPress={this.hideModal} title="Decline" style={Styles.button}/>
               </View>
             </View>
           )}
+          <Text style={{
+            textAlign: 'center',
+            color: 'white',
+            fontWeight: 'bold',
+            fontSize: 24
+          }}>
+            8:30am to 11:30am{'\n'}
+            ( 3 hours ){'\n'}
+            520 Bourke St. VIC{'\n'}
+            Insert Description Here{'\n'}
+          </Text>
+          <View style={{
+              flex:1,
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              paddingTop:30,
+              marginTop:100,
+            }}>
+            <TouchableOpacity onPress={this.props.onHomePress}>
+              <View >
+                <Text style={Styles.closeBanner} >Cancel</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.setState({displayModal:true})}>
+              <View>
+                <Text style={Styles.openShiftBanner}>Cover My Shift</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </ScrollView>
-        <TouchableOpacity onPress={() => this.setState({displayModal:true})}>
-          <ScrollView>
-            <Text style={Styles.openShiftBanner}>Open Shift</Text>
-          </ScrollView>
-        </TouchableOpacity>
+
       </View>
     );
   }

@@ -3,7 +3,7 @@ import {View, ScrollView, Text, Button} from 'react-native';
 import { Styles } from './Styles.js';
 import ShiftDetailed from './ShiftDetailed';
 
-class ShiftInfo extends React.Component{
+class ShiftInfo0 extends React.Component{
   constructor(props){
     super(props);
 
@@ -25,13 +25,13 @@ class ShiftInfo extends React.Component{
     return(
       <View>
         <View style={{borderRadius: 2, borderWidth: 1, padding: 5}}>
-          <Text>What: Cleaning{'\n'}
-                Where: Southern Cross{'\n'}
-                When: 1:00pm - 4:00pm{'\n'}</Text>
+          <Text>What: Catering{'\n'}
+                Where: 520 Bourke St.{'\n'}
+                When: 4:00pm - 7:30pm{'\n'}</Text>
         </View>
       </View>
     );
   }
 }
 
-export default ShiftInfo;
+export default ShiftInfo0;

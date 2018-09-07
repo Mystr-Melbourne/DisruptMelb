@@ -5,6 +5,7 @@ import ShiftDetailed from './ShiftDetailed.js';
 import UserProfile from './UserProfile.js';
 import Header from './Header.js';
 import OpenShifts from './OpenShifts.js';
+import MyCalendar0 from './MyCalendar0.js';
 
 class Secured extends React.Component {
     constructor(props) {
@@ -44,11 +45,13 @@ class Secured extends React.Component {
         switch (this.state.pageId) {
             case 0: {
                 return (
-                    <ScrollView style={{padding: 20}}>
-                        <Header onOSPress={this.viewOpenShifts} onProfilePress={this.viewUserProfile}
-                                onHomePress={this.viewHomeScreen}/>
+                    <View style={{padding: 20}}>
+                      <Header onOSPress={this.viewOpenShifts} onProfilePress={this.viewUserProfile}
+                              onHomePress={this.viewHomeScreen}/>
+                    <ScrollView>
                         <HomeScreen showDetails={this.viewShiftDetails}/>
                     </ScrollView>
+                    </View>
                 );
             }
             case 1: {
