@@ -1,10 +1,10 @@
 # We came in 2nd out of 18 teams - Won $1000 - "Most Promising Startup" Award
 
-Our team "Disrupt Melbourne" worked overnight to solve a problem. We were presented with industry problems from Spotless and Downer to experiencing multiple pivots, lean canvases and different Kanban Agile boards to solve the biggest pain point:
+Our team worked overnight to solve a problem given to us by Spotless and Downer. We went from experiencing multiple pivots, lean canvases and different Kanban Agile boards to a solution for a big pain point:
 
 - "Companies are underutilitizing existing resources and are spending millions of dollars hiring new employees or subcontractors for major events"
 
-We came up with a smart shift manager application that allows employees of companies to "Open Shifts" so that they dont have to go through the nightmare of swapping shifts, other casual employees who don't get many shifts can take on one of the "open shifts" and event organizers can delegate more qualified people from other departments into roles.
+Our smart shift manager app allows employees to "Open Shifts" so that they don't go through the nightmare of swapping shifts. Casual employees who don't get many shifts can fill in "open shifts". Event organizers can delegate more qualified people from other departments into other roles as well.
 
 ## Disrupt Melbourne (Top left - Bottom right)
 - [Josh Tencic](https://github.com/rmit-s3657249-joshua-tencic)
