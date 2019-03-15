@@ -11,7 +11,7 @@ Our smart shift manager app allows employees to "Open Shifts" so that they don't
 - [Boxuan Lu](https://github.com/BoxHezi)
 - [Michael Dao](https://github.com/MichaelDao)
 - [Jack Ryan](https://github.com/Jack-Ryan)
-- [Inci Keleher](https://github.com/inci90)
+- [Isaac Keleher](https://github.com/inci90)
 - [Daniel Dao](https://github.com/DanDanDao)
 - [Adrian Lim](https://github.com/adrnlm)
 
